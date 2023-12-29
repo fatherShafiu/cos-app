@@ -1,0 +1,17 @@
+
+<div class="notice-message">
+  <p><%= notice %></p>
+</div>
+
+<h1 class="appointments-title">Appointments</h1>
+
+<div id="appointments" class="appointments-list">
+  <% @appointments.each do |appointment| %>
+    <%= render appointment %>
+    <p class="show-appointment-link">
+      <%= link_to "Show this appointment", appointment %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New appointment", new_appointment_path, class: "new-appointment-link" %>

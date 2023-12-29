@@ -1,0 +1,14 @@
+
+<div class="content-container">
+  <div class="centered-content">
+    <h1 class="new-appointment-title">New appointment</h1>
+
+    <%= render "form", appointment: @appointment %>
+
+    <br>
+
+    <div class="back-to-appointments">
+      <%= link_to "Back to appointments", appointments_path %>
+    </div>
+  </div>
+</div>

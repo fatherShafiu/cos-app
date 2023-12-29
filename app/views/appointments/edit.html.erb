@@ -1,0 +1,11 @@
+
+<h1 class="edit-appointment-title">Editing appointment</h1>
+
+<%= render "form", appointment: @appointment %>
+
+<br>
+
+<div class="appointment-actions">
+  <%= link_to "Show this appointment", @appointment, class: "show-appointment-link" %> |
+  <%= link_to "Back to appointments", appointments_path, class: "back-to-appointments-link" %>
+</div>

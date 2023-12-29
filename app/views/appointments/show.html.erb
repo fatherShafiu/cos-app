@@ -1,0 +1,13 @@
+
+<div class="notice-message">
+  <p><%= notice %></p>
+</div>
+
+<%= render @appointment %>
+
+<div class="appointment-actions">
+  <%= link_to "Edit this appointment", edit_appointment_path(@appointment), class: "edit-appointment-link" %> |
+  <%= link_to "Back to appointments", appointments_path, class: "back-to-appointments-link" %>
+
+  <%= button_to "Destroy this appointment", @appointment, method: :delete, class: "destroy-appointment-button" %>
+</div>

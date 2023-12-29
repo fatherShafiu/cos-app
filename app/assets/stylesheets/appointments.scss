@@ -1,0 +1,176 @@
+/* application.scss */
+
+/* Styles for the content container */
+.content-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Set height to occupy full viewport height */
+  }
+
+  /* Styles for the centered content */
+  .centered-content {
+    max-width: 600px; /* Adjust maximum width as needed */
+    padding: 30px;
+    border: 1px solid #ccc; /* Faint box around the content */
+    border-radius: 8px; /* Rounded corners for the box */
+    background-color: #f9f9f9; /* Background color for the content */
+  }
+
+  /* Other styles remain the same */
+
+  /* Styles for h1 element */
+  .new-appointment-title {
+    color: #3d6cbf;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  /* Styles for the link */
+  .back-to-appointments a {
+    color: #3d6cbf;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+
+  //index
+  /* Styles for the "Back to appointments" link container */
+  .back-to-appointments {
+    margin-top: 20px;
+  }
+/* application.scss */
+
+/* Styles for the notice message */
+.notice-message {
+    color: green;
+  }
+
+  /* Styles for h1 element */
+  .appointments-title {
+    color: #3d6cbf;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  /* Styles for the appointments list */
+  .appointments-list {
+    max-width: 600px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+
+  /* Styles for individual appointments */
+  #appointments > div {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+  }
+
+  /* Styles for the link to show appointment */
+  .show-appointment-link a {
+    color: #3d6cbf;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  /* Styles for the link to create a new appointment */
+  .new-appointment-link {
+    color: #3d6cbf;
+    display: block;
+    margin-top: 20px;
+  }
+
+  //show
+
+  /* application.scss */
+
+/* Styles for the notice message */
+.notice-message {
+    color: green;
+  }
+
+  /* Styles for the appointment details */
+  /* Apply styles to specific elements within the appointment detail rendering */
+
+  /* Styles for the appointment actions container */
+  .appointment-actions {
+    margin-top: 20px;
+  }
+
+  /* Styles for the link to edit appointment */
+  .edit-appointment-link {
+    color: #3d6cbf;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  /* Styles for the link to go back to appointments */
+  .back-to-appointments-link {
+    color: #3d6cbf;
+    text-decoration: none;
+    margin-left: 10px; /* Adjust margin as needed */
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  /* Styles for the button to destroy appointment */
+  .destroy-appointment-button {
+    background-color: #ff6b6b; /* Red color for the delete button */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin-left: 10px; /* Adjust margin as needed */
+    cursor: pointer;
+    &:hover {
+      background-color: #e53935; /* Darker red on hover */
+    }
+  }
+
+
+  //edit
+
+  /* application.scss */
+
+/* Styles for the edit appointment title */
+.edit-appointment-title {
+    color: #3d6cbf;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  /* Styles for the appointment form (assuming form elements) */
+  /* Apply styles to specific elements within the appointment form */
+
+  /* Styles for the appointment actions container */
+  .appointment-actions {
+    margin-top: 20px;
+  }
+
+  /* Styles for the link to show appointment */
+  .show-appointment-link {
+    color: #3d6cbf;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  /* Styles for the link to go back to appointments */
+  .back-to-appointments-link {
+    color: #3d6cbf;
+    text-decoration: none;
+    margin-left: 10px; /* Adjust margin as needed */
+    &:hover {
+      text-decoration: underline;
+    }
+  }
