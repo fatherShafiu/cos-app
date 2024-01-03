@@ -3,8 +3,16 @@ class AppointmentsController < ApplicationController
 
   # GET /appointments or /appointments.json
   def index
-    @appointments = Appointment.all
+    if current_user.role == 'student'
+      @appointments = Appointment.joins(:user).where(users: { role: 'student' })
+      # Fetch appointments for the current logged-in student only
+    else
+      @appointments = Appointment.joins(:user).where(users: { role: 'counselor' })
+      # Fetch appointments for the current logged-in counselor only
+    end
   end
+
+
 
   # GET /appointments/1 or /appointments/1.json
   def show

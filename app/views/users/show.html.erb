@@ -1,3 +1,44 @@
+<style>
+.profile-page span,.content__title,.button__text{
+	font-family: "Roboto", Arial, sans-serif;
+    font-size: 16.5px;
+    line-height: 1.8;
+    font-weight: 400;
+    color: white;
+}
+.profile-page .content__list {
+    margin-top: -0.5rem;
+
+}
+
+.profile-page .content__button .button {
+    padding: 0;
+   	font-family: "Roboto", Arial, sans-serif;
+    font-size: 16.5px;
+    padding-left:1rem;
+    padding-right:1rem;
+    text-align:center;
+    padding-top:0.6rem;
+}
+
+.profile-page {
+    display: block;
+    min-height: 100vh;
+    padding-top: 0.5rem;
+}
+
+.valuesa{
+  color: orange;
+}
+.valuesi{
+  color:blue;
+}
+
+.valuesr{
+  color:green;
+}
+</style>
+<%=render 'shared/menu_bar'%>
 <div class="profile-page">
   <div class="content">
     <div class="content__cover">
@@ -18,26 +59,15 @@
       <h1>Mr. Patrice</h1><span>Computer Science</span>
     </div>
     <ul class="content__list">
-      <li><span>65</span>Appointments</li>
-      <li><span>43</span>Issues and support</li>
-      <li><span>21</span>Resolved</li>
+      <li>Appointments<div class="valuesa">(3)</div></li>
+      <li></span>Issues and support<div class="valuesi">(3)</div></li>
+      <li>Resolved<div class="valuesr">(3)</div></li>
     </ul>
     <div class="content__button"><a class="button" href="#">
         <div class="button__border"></div>
         <div class="button__bg"></div>
         <p class="button__text" style="color:white">see more</p></a></div>
   </div>
-  <div class="bg">
-    <div><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
-    </div>
-  </div>
-  <div class="theme-switcher-wrapper" id="theme-switcher-wrapper"><span>Themes color</span>
-    <ul>
-      <li><em class="is-active" data-theme="orange"></em></li>
-      <li><em data-theme="green"></em></li>
-      <li><em data-theme="purple"></em></li>
-      <li><em data-theme="blue"></em></li>
-    </ul>
-  </div>
+
 
 </div>

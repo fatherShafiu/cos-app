@@ -1,4 +1,3 @@
 class Appointment < ApplicationRecord
-  belongs_to :student, class_name: 'User', foreign_key: 'student_id'
-  belongs_to :counselor, class_name: 'User', foreign_key: 'counselor_id'
+  belongs_to :user, foreign_key: 'role', primary_key: 'role'
 end
