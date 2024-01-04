@@ -10,13 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_01_01_185915) do
+ActiveRecord::Schema[7.1].define(version: 2024_01_04_001533) do
   create_table "appointments", force: :cascade do |t|
     t.datetime "date"
-    t.integer "student_id"
-    t.integer "counselor_id"
+    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_appointments_on_user_id"
   end
 
   create_table "messages", force: :cascade do |t|
@@ -43,6 +43,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_01_185915) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "appointments", "users"
   add_foreign_key "messages", "recipients"
   add_foreign_key "messages", "senders"
 end
