@@ -69,13 +69,19 @@
     <i class='bx bxs-contact'></i> Contact
   <% end %>
 </li>
-
+<%if current_user %>
 <li class="nav-item">
   <%= link_to(new_user_session_path, class: "nav-link") do %>
     <i class='bx bx-log-in-circle'></i> Sign in
   <% end %>
 </li>
-
+<%else%>
+<li class="nav-item">
+  <%= link_to(destroy_user_session_path, method: :delete, class: "nav-link") do %>
+    <i class='bx bx-log-in-circle'></i> Logout
+  <% end %>
+</li>
+<%end%>
 	        </ul>
 	      </div>
 	    </div>
