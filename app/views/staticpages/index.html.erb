@@ -7,7 +7,7 @@
           <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
           	<span class="subheading">Speak to someone today</span>
 			  <h2 class="mb-4">We're here to help you</h2>
-			  <p><a href="#" class="btn btn-primary py-3 px-4">Call us</a> <a href="#" class="btn btn-white py-3 px-4">Make an appointment</a></p>
+			  <p><a href="#" class="btn btn-primary py-3 px-4">Call us</a> <a href="#"  id="myBtn" class="btn btn-white py-3 px-4 ">Make an appointment</a></p>
           </div>
         </div>
         <div class="row ftco-animate">
@@ -271,6 +271,97 @@
   <!-- loader
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 -->
+
+<!-- Trigger/Open The Modal -->
+
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Choose an option:</p>
+    <ul>
+      <li><a href="#">Example office</a></li>
+      <li><a href="#">Counsellor</a></li>
+    </ul>
+  </div>
+
+</div>
+
+<!-- CSS for the modal -->
+<style>
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+</style>
+
+<!-- JavaScript for the modal -->
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+```
+
+You can learn more about how to create a modal window with CSS and JavaScript from
 
   <script >
   /*!
