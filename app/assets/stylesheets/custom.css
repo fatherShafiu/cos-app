@@ -4158,3 +4158,83 @@ body {
   font-size:16px ;
 }
 
+
+/* The Modal (background) */
+.fmodal,.dmodal,#section3_modal{
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.fmodal-content,.dmodal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 60%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+@media screen and (max-width:800px){
+  .fmodal-content,.dmodal-content {
+    width: 99%;
+  }
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close,.dclose {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,.dclose:hover,
+.close:focus,.dclose:focus  {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.fmodal-header,.dmodal-header {
+  padding: 2px 16px;
+  background-color:#59dbe7;
+  color: black;
+}
+#con2 .dmodal-header h2,
+.condrink  .dmodal-header h2{
+  border-bottom:none;
+}
+
+.fmodal-body,.dmodal-body {padding: 2px 16px; color:black}
+
+.fmodal-footer,.dmodal-footer {
+  padding: 2px 16px;
+  background-color: #53f3e6;
+  color: black;
+  text-align: center;
+}
