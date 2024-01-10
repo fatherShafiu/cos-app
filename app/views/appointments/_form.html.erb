@@ -1,8 +1,7 @@
-<%= form_with(model: appointment) do |form| %>
+<%= form_with(model: appointment, class: "form") do |form| %>
   <% if appointment.errors.any? %>
-    <div style="color: red">
+    <div class="alert alert-danger">
       <h2><%= pluralize(appointment.errors.count, "error") %> prohibited this appointment from being saved:</h2>
-
       <ul>
         <% appointment.errors.each do |error| %>
           <li><%= error.full_message %></li>
@@ -11,10 +10,11 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :date, style: "display: block" %>
-    <%= form.datetime_field :date %>
+  <div class="form-group">
+    <%= form.label :date %>
+    <%= form.datetime_field :date, class: "form-control" %>
   </div>
-    <%= form.submit %>
+  <div class="form-group">
+    <%= form.submit class: "btn btn-primary" %>
   </div>
 <% end %>
