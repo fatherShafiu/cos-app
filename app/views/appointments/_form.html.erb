@@ -14,6 +14,18 @@
     <%= form.label :date %>
     <%= form.datetime_field :date, class: "form-control" %>
   </div>
+
+  <div class="form-group">
+    <%= form.label :Schedule_appointment_with %>
+    <%= form.select :role, options_for_select(['counsellor', 'exams_officer']), { include_blank: 'Select Role' }, class: 'form-control' %>
+  </div>
+
+<!--
+  <div class="form-group">
+    <%= form.label :status %>
+    <%= form.select :status, options_for_select(['approved', 'pending']), { include_blank: 'Select Status' }, class: 'form-control' %>
+  </div>
+-->
   <div class="form-group">
     <%= form.submit class: "btn btn-primary" %>
   </div>
