@@ -67,3 +67,4 @@ group :test do
 end
 gem 'devise', '~> 4.9', '>= 4.9.3'
 gem 'sassc'
+gem 'pg', '~> 1.5', '>= 1.5.4'
