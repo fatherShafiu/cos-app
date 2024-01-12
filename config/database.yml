@@ -88,4 +88,4 @@ production:
   <<: *default
   database: cos_production
   username: cos
-  password: <%= ENV['KFX_DATABASE_PASSWORD'] %>
+  password: <%= ENV['COS_DATABASE_PASSWORD'] %>
