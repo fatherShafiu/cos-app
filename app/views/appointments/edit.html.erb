@@ -1,4 +1,12 @@
-<h1 class="edit-appointment-title">Editing appointment</h1>
+<%=render 'shared/menu_bar'%>
+<style>
+.btn{
+  color: white;
+}
+
+</style>
+<div class="appointments">
+<h1 class="edit-appointment-title">Edit appointment</h1>
 
 <%= render "form", appointment: @appointment %>
 
@@ -7,4 +15,5 @@
 <div class="appointment-actions">
   <%= link_to "Show this appointment", @appointment, class: "btn btn-info" %> |
   <%= link_to "Back to appointments", appointments_path, class: "btn btn-secondary" %>
+</div>
 </div>
