@@ -165,9 +165,10 @@
 				</div>
 			</div>
 		</section>
-
+<!--
 		<section class="ftco-appointment ftco-section img" style="background-image: url(images/Orientation\ FBS-102.jpg);">
 			<div class="overlay"></div>
+
     	<div class="container">
     		<div class="row justify-content-center">
     			<div class="col-md-6 half ftco-animate">
@@ -218,6 +219,7 @@
     		</div>
     	</div>
     </section>
+	-->
 
     <footer class="ftco-footer">
       <div class="container">
@@ -226,11 +228,13 @@
             <div class="ftco-footer-widget mb-4">
               <h2 class="ftco-heading-2 logo"><a href="#">COS Help Desk</a></h2>
               <p><!-- --> </p>
+			  <!--
               <ul class="ftco-footer-social list-unstyled mt-2">
                 <li class="ftco-animate"><a href="#"><span class="fa fa-twitter"></span></a></li>
                 <li class="ftco-animate"><a href="#"><span class="fa fa-facebook"></span></a></li>
                 <li class="ftco-animate"><a href="#"><span class="fa fa-instagram"></span></a></li>
               </ul>
+			  -->
             </div>
           </div>
           <div class="col-sm-12 col-md">
@@ -286,8 +290,8 @@
     <span class="close">&times;</span>
     <p>Make an Appointment With:</p>
     <ul>
-      <li><%= link_to 'Department/College Exam Officet', new_appointment_path %></li>
-      <li><%= link_to 'College Counsellor', new_appointment_path %></li>
+	  <li><%= link_to 'College Counsellor', new_appointment_path %></li>
+      <li><%= link_to 'Department/College Exam Office', new_appointment_path %></li>
     </ul>
   </div>
 
@@ -6455,7 +6459,5 @@ return jQuery;
 	contentWayPoint();
 
 })(jQuery);
-
-
   </script>
 
