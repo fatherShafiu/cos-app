@@ -17,6 +17,17 @@
 	font-family: "Roboto", Arial, sans-serif;
 }
 
+#ftco-navbar{
+	background: white !important;
+	color: black
+}
+
+@media (max-width: 991.98px) {
+    .ftco-navbar-light .navbar-brand {
+        color: black;
+    }
+}
+
 </style>
 <div class="wrap">
 			<div class="container">
@@ -40,12 +51,13 @@
 			</div>
 		</div>
 
-	  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+	  <nav class="navbar navbar-expand-lg navbar-white ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container">
 		<!-- <img class="logo" height="36" src="images/tech.png" /> -->
-	<%= image_tag('cos.png', class: 'logo', height: 40, width: 45) %>
+		<%= image_tag('ust.png', class: 'logo', height: 40, width: 45) %>
+	<%= image_tag('logo.png', class: 'logo', height: 40, width: 45) %>
 
-	      <a class="navbar-brand" href="index.html">COS STUDENT SUPPORT</a>
+	      <a class="navbar-brand" href="index.html">COS STUDENT SUPPORT </a>
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="oi oi-menu"></span> Menu
 	      </button>
