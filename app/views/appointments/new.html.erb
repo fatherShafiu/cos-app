@@ -1,14 +1,25 @@
+<style>
+.centered-content{
+  width:70%;
+  margin-left: 30%;
+  margin-bottom: 2%;
+    margin-top: 2%;
+}
+
+.bappointments a{
+  color: white;
+}
+</style>
+
 <%=render 'shared/menu_bar'%>
-<div class="content-container">
+
   <div class="centered-content">
-    <h1 class="new-appointment-title">New appointment</h1>
-
+    <h1 class="new-appointment-title">New Appointment</h1>
     <%= render "form", appointment: @appointment %>
-
     <br>
-
-    <div class="back-to-appointments">
-      <%= link_to "Back to appointments", appointments_path %>
+    <div class="bappointments">
+      <%= link_to "Back to appointments", appointments_path,  class: "btn btn-secondary" %>
     </div>
   </div>
 </div>
+<%=render 'shared/footer'%>

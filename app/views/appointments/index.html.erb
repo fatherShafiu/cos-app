@@ -1,104 +1,51 @@
 <style>
-  /* Add some custom CSS to center and style the page */
-  .container {
-    max-width: 800px;
-    margin: 0 auto;
-    	font-family: "Roboto", Arial, sans-serif;
+.btn{
+  color: white;
+
+}
+body{
+  	font-family: "Roboto", Arial, sans-serif;
     font-size: 16.5px;
     line-height: 1.8;
     font-weight: 400;
+}
+.card{
+  width:50%;
+  margin-left: 25%;
+}
 
-  .notice-message {
-    background-color: #f0f0f0;
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin-bottom: 20px;
-  }
+.render {
 
-  .appointments-title {
-    text-align: center;
-    color: #333;
-    font-size: 36px;
-  }
-
-  .card {
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
-    border-radius: 5px;
-  }
-
-  .card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-  }
-
-  .card-body {
-    padding: 20px;
-  }
-
-  .btn {
-    display: inline-block;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    cursor: pointer;
-  }
-
-  .btn-primary {
-    background-color: #007bff;
-  }
-
-  .btn-primary:hover {
-    background-color: #0069d9;
-  }
-
-  .btn-info {
-    background-color: #17a2b8;
-  }
-
-  .btn-info:hover {
-    background-color: #138496;
-  }
-
-  .btn-secondary {
-    background-color: #6c757d;
-  }
-
-  .btn-secondary:hover {
-    background-color: #5a6268;
-  }
-
-  .btn-outline-primary {
-    background-color: transparent;
-    color: #007bff;
-    border: 1px solid #007bff;
-  }
-
-  .btn-outline-primary:hover {
-    background-color: #007bff;
-    color: white;
-  }
+  margin: 4%;
+  background: white;
+  padding:2%;
+  border-radius: 5px;
+  border: 1px solid #666666;
+}
 </style>
 <%=render 'shared/menu_bar'%>
 <div class="container">
   <div class="notice-message">
     <p><%= notice %></p>
   </div>
+   <h1 align="center">Appointments</h1>
+ <div class="card mt-4">
 
-  <h1 class="appointments-title">Appointments</h1>
+  <%= link_to "New appointment", new_appointment_path, class: "btn btn-primary" %>
+ </div>
+  <% @appointments.each do |appointment| %>
+  <div class="card mt-4">
+   <div class="render">
 
-  <div id="appointments" class="appointments-list">
-    <% @appointments.each do |appointment| %>
-      <div class="card mb-3">
-        <div class="card-body">
           <%= render appointment %>
           <p class="show-appointment-link">
-            <%= link_to "Show this appointment", appointment, class: "btn btn-outline-primary" %>
+            <%= link_to "Show this appointment", appointment, class: "btn btn-primary" %>
           </p>
         </div>
       </div>
-    <% end %>
-  </div>
 
-  <%= link_to "New appointment", new_appointment_path, class: "btn btn-primary" %>
+    <% end %>
+
+
+  </div>
 </div>

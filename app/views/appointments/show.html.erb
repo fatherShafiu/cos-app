@@ -2,20 +2,43 @@
 <style>
 .btn{
   color: white;
+
+}
+body{
+  	font-family: "Roboto", Arial, sans-serif;
+    font-size: 16.5px;
+    line-height: 1.8;
+    font-weight: 400;
+}
+.card{
+  width:50%;
+  margin-left: 25%;
+}
+
+.render {
+
+  margin: 4%;
+  background: white;
+  padding:2%;
+  border-radius: 5px;
+  border: 1px solid #666666;
 }
 </style>
 <div class="alert alert-info notice-message">
   <p><%= notice %></p>
 </div>
-
-<%= render @appointment %>
-
 <div class="card mt-4">
+<div class="render">
+<%= render @appointment %>
+</div>
+
   <div class="card-body d-flex justify-content-between align-items-center">
     <%= link_to "Edit this appointment", edit_appointment_path(@appointment), class: "btn btn-primary" %>
-    <span class="text-muted">|</span>
+    <span class="text-muted"></span>
     <%= link_to "Back to appointments", appointments_path, class: "btn btn-secondary" %>
 
     <%= button_to "Destroy this appointment", @appointment, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
   </div>
 </div>
+<br>
+<%= render partial: "shared/footer" %>
