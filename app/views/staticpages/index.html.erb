@@ -139,19 +139,19 @@ font-weight: bolder;
   				<div class="col-md-4">
 						<ul class="nav nav-pills nav-fill d-md-flex d-block flex-column">
 						  <li class="nav-item text-left">
-						    <a class="nav-link active py-4" data-toggle="tab" href="#services-1">Academic Issues</a>
+						    <a class="nav-link nav-lin  active py-4" data-toggle="tab" href="#services-1">Academic Issues</a>
 						  </li>
 						  <li class="nav-item text-left">
-						    <a class="nav-link py-4" data-toggle="tab" href="#services-2">Book Counseling Sessions</a>
+						    <a class="nav-link nav-lin  py-4" data-toggle="tab" href="#services-2">Book Counseling Sessions</a>
 						  </li>
 						  <li class="nav-item text-left">
-						    <a class="nav-link py-4" data-toggle="tab" href="#services-3">Live Updates</a>
+						    <a class="nav-link nav-lin  py-4" data-toggle="tab" href="#services-3">Live Updates</a>
 						  </li>
 						  <li class="nav-item text-left">
-						    <a class="nav-link py-4" data-toggle="tab" href="#services-4">Support</a>
+						    <a class="nav-link nav-lin  py-4" data-toggle="tab" href="#services-4">Support</a>
 						  </li>
 						  <li class="nav-item text-left">
-						    <a class="nav-link py-4" data-toggle="tab" href="#services-6">Food Bank</a>
+						    <a class="nav-link nav-lin  py-4" data-toggle="tab" href="#services-6">Food Bank</a>
 						  </li>
 						</ul>
 					</div>
@@ -6434,5 +6434,36 @@ Trigger/Open The Modal -->
 
     })(jQuery);
       </script>
+<script>
+    // JavaScript to handle click events on navigation links
+    document.addEventListener('DOMContentLoaded', function() {
+        var navLinks = document.querySelectorAll('.nav-lin');
 
+        navLinks.forEach(function(link) {
+            link.addEventListener('click', function(event) {
+                event.preventDefault();
+                var tabId = this.getAttribute('href'); // Get the href attribute value
+                var tabContent = document.querySelector(tabId); // Find the corresponding tab content
+
+                // Remove active class from all nav links
+                document.querySelectorAll('.nav-lin').forEach(function(navLink) {
+                    navLink.classList.remove('active');
+                });
+
+                // Remove active class from all tab contents
+                document.querySelectorAll('.tab-pane').forEach(function(tab) {
+                    tab.classList.remove('active');
+                    tab.classList.remove('show');
+                });
+
+                // Add active class to the clicked nav link
+                this.classList.add('active');
+
+                // Show the selected tab content
+                tabContent.classList.add('active');
+                tabContent.classList.add('show');
+            });
+        });
+    });
+</script>
 
