@@ -128,7 +128,7 @@ font-weight: bolder;
     	</div>
     </section>
 
-   		<section class="ftco-section">
+<section class="ftco-section">
 			<div class="container">
 				<div class="row justify-content-center mb-5">
           <div class="col-md-8 text-center heading-section ftco-animate">
@@ -188,38 +188,7 @@ font-weight: bolder;
 					</div>
 				</div>
 			</div>
-			<script>
-    // JavaScript to handle click events on navigation links
-    document.addEventListener('DOMContentLoaded', function() {
-        var navLinks = document.querySelectorAll('.nav-link');
 
-        navLinks.forEach(function(link) {
-            link.addEventListener('click', function(event) {
-                event.preventDefault();
-                var tabId = this.getAttribute('href'); // Get the href attribute value
-                var tabContent = document.querySelector(tabId); // Find the corresponding tab content
-
-                // Remove active class from all nav links
-                document.querySelectorAll('.nav-link').forEach(function(navLink) {
-                    navLink.classList.remove('active');
-                });
-
-                // Remove active class from all tab contents
-                document.querySelectorAll('.tab-pane').forEach(function(tab) {
-                    tab.classList.remove('active');
-                    tab.classList.remove('show');
-                });
-
-                // Add active class to the clicked nav link
-                this.classList.add('active');
-
-                // Show the selected tab content
-                tabContent.classList.add('active');
-                tabContent.classList.add('show');
-            });
-        });
-    });
-</script>
 		</section>
 <!--
 		<section class="ftco-appointment ftco-section img" style="background-image: url(images/Orientation\ FBS-102.jpg);">

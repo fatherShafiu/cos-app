@@ -12,7 +12,9 @@
 </style>
 
 <%=render 'shared/menu_bar'%>
-
+<div class="alert alert-info notice-message">
+  <p><%= notice %></p>
+</div>
   <div class="centered-content">
     <h1 class="new-appointment-title">New Appointment</h1>
     <%= render "form", appointment: @appointment %>
