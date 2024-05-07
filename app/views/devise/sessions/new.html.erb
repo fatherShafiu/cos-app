@@ -61,13 +61,12 @@
 
 
 <script>
-
 (function ($) {
     "use strict";
 
+    // Code wrapped in a self-executing anonymous function to avoid conflicts with other JavaScript libraries and ensure jQuery ($) is available.
 
-    /*==================================================================
-    [ Focus input ]*/
+    // Event listener to add a class when input fields are not empty
     $('.input100').each(function(){
         $(this).on('blur', function(){
             if($(this).val().trim() != "") {
@@ -79,11 +78,10 @@
         })
     })
 
-
     /*==================================================================
     [ Validate ]*/
+    // Validation function
     var input = $('.validate-input .input100');
-
     $('.validate-form').on('submit',function(){
         var check = true;
 
@@ -97,13 +95,14 @@
         return check;
     });
 
-
+    // Function to hide validation messages on focus
     $('.validate-form .input100').each(function(){
         $(this).focus(function(){
            hideValidate(this);
         });
     });
 
+    // Function to validate input fields
     function validate (input) {
         if($(input).attr('type') == 'email' || $(input).attr('name') == 'email') {
             if($(input).val().trim().match(/^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{1,5}|[0-9]{1,3})(\]?)$/) == null) {
@@ -117,20 +116,21 @@
         }
     }
 
+    // Function to show validation messages
     function showValidate(input) {
         var thisAlert = $(input).parent();
-
         $(thisAlert).addClass('alert-validate');
     }
 
+    // Function to hide validation messages
     function hideValidate(input) {
         var thisAlert = $(input).parent();
-
         $(thisAlert).removeClass('alert-validate');
     }
 
     /*==================================================================
     [ Show pass ]*/
+    // Functionality to toggle password visibility
     var showPass = 0;
     $('.btn-show-pass').on('click', function(){
         if(showPass == 0) {
@@ -148,8 +148,9 @@
 
     });
 
-
 })(jQuery);
 </script>
+
+
 </body>
 </html>
