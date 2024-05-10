@@ -3609,17 +3609,17 @@ body {
   background: rgba(255,255,255,0.04);
 }
 .profile-page .content__avatar {
-  width: 12rem;
-  height: 12rem;
+  width: 10rem;
+  height: 10rem;
   position: absolute;
   bottom: 0;
   left: 50%;
   z-index: 2;
   transform: translate(-50%, 50%);
-  background: #8f6ed5 url("https://cos.knust.edu.gh/sites/cos.knust.edu.gh/files/inline-images/Mr.%20patrice.png") center center no-repeat;
+  background:  url("https://cos.knust.edu.gh/sites/cos.knust.edu.gh/files/inline-images/Mr.%20patrice.png") ;
   background-size: cover;
   border-radius: 50%;
-  box-shadow: 0 15px 35px rgba(50,50,93,0.1), 0 5px 15px rgba(0,0,0,0.07);
+  box-shadow: 0 15px 35px rgba(37, 37, 54, 0.1), 0 5px 15px rgba(0,0,0,0.07);
 }
 .profile-page .content__avatar::before {
   content: "";
@@ -3628,7 +3628,7 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  border-radius: 50%;
+  border-radius: 30%;
 }
 @media (max-width: 990px) {
   .profile-page .content__avatar {
@@ -3641,7 +3641,7 @@ body {
 .profile-page .content__actions {
   display: flex;
   justify-content: space-between;
-  padding: 0.2rem;
+  padding: 0.1rem;
 }
 @media (max-width: 990px) {
   .profile-page .content__actions {
@@ -3664,6 +3664,7 @@ body {
     padding: 0.5rem;
   }
 }
+
 @media (max-width: 990px) {
   .profile-page .content__actions a span {
     display: none;

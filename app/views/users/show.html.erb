@@ -39,6 +39,8 @@
 }
 </style>
 <%=render 'shared/menu_bar'%>
+<br/>
+<br/>
 <div class="profile-page">
   <div class="content">
     <div class="content__cover">
@@ -56,19 +58,23 @@
           <path fill="currentColor" d="M576 320c0 34.3-14.1 66-38 92 13.4 30.3 35.5 54.2 35.8 54.5a8 8 0 0 1 1.5 8.7 7.88 7.88 0 0 1-7.3 4.8c-36.6 0-66.9-12.3-88.7-25-32.2 15.8-70.3 25-111.3 25-86.2 0-160.2-40.4-191.7-97.9A299.82 299.82 0 0 0 208 384c132.3 0 240-86.1 240-192a148.61 148.61 0 0 0-1.3-20.1C522.5 195.8 576 253.1 576 320z"></path>
         </svg><span>Messages</span></a></div>
     <div class="content__title">
-      <h1><%=current_user.name %></h1><span>Computer Science</span>
+      <h5><%=current_user.name %></h5><span>Computer Science</span>
     </div>
-    <ul class="content__list">
-      <li>Appointments<div class="valuesa">(3)</div></li>
-      <li></span>Issues and support<div class="valuesi">(3)</div></li>
-      <li>Resolved<div class="valuesr">(3)</div></li>
-    </ul>
+   <ul class="content__list">
+  <li>
+    <a href="<%= appointments_path %>">Appointments<div class="valuesa">( <%= current_user.appointments.count %> )</div></a>
+  </li>
+  <li>Issues and support<div class="valuesi">(3)</div></li>
+  <li>Resolved<div class="valuesr">(3)</div></li>
+</ul>
+
     <div class="content__button"><a class="button" href="#">
         <div class="button__border"></div>
         <div class="button__bg"></div>
         <p class="button__text" style="color:white">see more</p></a></div>
   </div>
-
-
-</div>
+<br/>
+<br/>
 <%= render partial: "shared/footer" %>
+</div>
+
