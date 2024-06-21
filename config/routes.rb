@@ -11,5 +11,6 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   get 'profile', to: 'users#show'
   get 'about',   to: 'staticpages#about'
+  get 'contact', to: 'staticpages#contact'
    root "staticpages#index"
 end
